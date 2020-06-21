@@ -1,9 +1,9 @@
 package postgres
 
 import (
-	"github.com/goranbjelanovic/jet/internal/jet"
-	"github.com/goranbjelanovic/jet/internal/testutils"
-	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/dvds/model"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/model"
 	"github.com/stretchr/testify/require"
 	"testing"
 )

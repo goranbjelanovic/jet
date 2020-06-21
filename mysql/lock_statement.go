@@ -1,6 +1,6 @@
 package mysql
 
-import "github.com/goranbjelanovic/jet/internal/jet"
+import "github.com/goranbjelanovic/jet/v2/internal/jet"
 
 // LockStatement is interface for MySQL LOCK tables
 type LockStatement interface {

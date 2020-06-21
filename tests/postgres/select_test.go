@@ -2,12 +2,12 @@ package postgres
 
 import (
 	"fmt"
-	"github.com/goranbjelanovic/jet/internal/testutils"
-	. "github.com/goranbjelanovic/jet/postgres"
-	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/dvds/enum"
-	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/dvds/model"
-	. "github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/dvds/table"
-	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/dvds/view"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	. "github.com/goranbjelanovic/jet/v2/postgres"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/enum"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/model"
+	. "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/table"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/view"
 	"github.com/stretchr/testify/require"
 	"testing"
 	"time"

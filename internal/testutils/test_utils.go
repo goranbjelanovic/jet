@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/google/uuid"
-	"github.com/goranbjelanovic/jet/internal/jet"
-	"github.com/goranbjelanovic/jet/internal/utils"
-	"github.com/goranbjelanovic/jet/qrm"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/utils"
+	"github.com/goranbjelanovic/jet/v2/qrm"
 	"github.com/stretchr/testify/require"
 	"io/ioutil"
 	"os"
@@ -41,7 +41,7 @@ func AssertExecErr(t *testing.T, stmt jet.Statement, db qrm.DB, errorStr string)
 
 func getFullPath(relativePath string) string {
 	goPath := os.Getenv("GOPATH")
-	return filepath.Join(goPath, "src/github.com/goranbjelanovic/jet/tests", relativePath)
+	return filepath.Join(goPath, "src/github.com/goranbjelanovic/jet/v2/tests", relativePath)
 }
 
 // PrintJson print v as json

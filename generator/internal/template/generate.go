@@ -3,9 +3,9 @@ package template
 import (
 	"bytes"
 	"fmt"
-	"github.com/goranbjelanovic/jet/generator/internal/metadata"
-	"github.com/goranbjelanovic/jet/internal/jet"
-	"github.com/goranbjelanovic/jet/internal/utils"
+	"github.com/goranbjelanovic/jet/v2/generator/internal/metadata"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/utils"
 	"path/filepath"
 	"text/template"
 )

@@ -1,6 +1,6 @@
 package mysql
 
-import "github.com/goranbjelanovic/jet/internal/jet"
+import "github.com/goranbjelanovic/jet/v2/internal/jet"
 
 // Column is common column interface for all types of columns.
 type Column = jet.ColumnExpression

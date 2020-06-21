@@ -1,4 +1,4 @@
-module github.com/goranbjelanovic/jet
+module github.com/goranbjelanovic/jet/v2
 
 go 1.11
 

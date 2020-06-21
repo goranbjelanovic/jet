@@ -1,7 +1,7 @@
 package postgres
 
 import (
-	"github.com/goranbjelanovic/jet/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
 )
 
 // Column is common column interface for all types of columns.

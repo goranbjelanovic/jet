@@ -2,8 +2,8 @@ package postgres
 
 import (
 	"fmt"
-	"github.com/goranbjelanovic/jet/internal/jet"
-	"github.com/goranbjelanovic/jet/internal/utils"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/utils"
 	"strconv"
 	"strings"
 	"time"

@@ -1,6 +1,6 @@
 package mysql
 
-import "github.com/goranbjelanovic/jet/internal/jet"
+import "github.com/goranbjelanovic/jet/v2/internal/jet"
 
 // CommonTableExpression contains information about a CTE.
 type CommonTableExpression struct {

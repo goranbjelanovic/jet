@@ -1,6 +1,6 @@
 package postgres
 
-import "github.com/goranbjelanovic/jet/internal/jet"
+import "github.com/goranbjelanovic/jet/v2/internal/jet"
 
 // Statement is common interface for all statements(SELECT, INSERT, UPDATE, DELETE, LOCK)
 type Statement = jet.Statement

@@ -1,6 +1,6 @@
 package mysql
 
-import "github.com/goranbjelanovic/jet/internal/jet"
+import "github.com/goranbjelanovic/jet/v2/internal/jet"
 
 // Table is interface for MySQL tables
 type Table interface {

@@ -3,11 +3,11 @@ package postgres
 import (
 	"fmt"
 	"github.com/google/uuid"
-	"github.com/goranbjelanovic/jet/internal/testutils"
-	. "github.com/goranbjelanovic/jet/postgres"
-	"github.com/goranbjelanovic/jet/qrm"
-	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/dvds/model"
-	. "github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/dvds/table"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	. "github.com/goranbjelanovic/jet/v2/postgres"
+	"github.com/goranbjelanovic/jet/v2/qrm"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/model"
+	. "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/table"
 	"github.com/stretchr/testify/require"
 	"testing"
 )

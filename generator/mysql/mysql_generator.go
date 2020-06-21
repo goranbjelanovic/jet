@@ -3,10 +3,10 @@ package mysql
 import (
 	"database/sql"
 	"fmt"
-	"github.com/goranbjelanovic/jet/generator/internal/metadata"
-	"github.com/goranbjelanovic/jet/generator/internal/template"
-	"github.com/goranbjelanovic/jet/internal/utils"
-	"github.com/goranbjelanovic/jet/mysql"
+	"github.com/goranbjelanovic/jet/v2/generator/internal/metadata"
+	"github.com/goranbjelanovic/jet/v2/generator/internal/template"
+	"github.com/goranbjelanovic/jet/v2/internal/utils"
+	"github.com/goranbjelanovic/jet/v2/mysql"
 	"path"
 )
 

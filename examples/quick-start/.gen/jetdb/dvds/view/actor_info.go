@@ -8,7 +8,7 @@
 package view
 
 import (
-	"github.com/goranbjelanovic/jet/postgres"
+	"github.com/goranbjelanovic/jet/v2/postgres"
 )
 
 var ActorInfo = newActorInfoTable()

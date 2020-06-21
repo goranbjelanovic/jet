@@ -3,7 +3,7 @@ package metadata
 import (
 	"database/sql"
 	"fmt"
-	"github.com/goranbjelanovic/jet/internal/utils"
+	"github.com/goranbjelanovic/jet/v2/internal/utils"
 	"strings"
 )
 

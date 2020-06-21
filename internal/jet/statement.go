@@ -3,7 +3,7 @@ package jet
 import (
 	"context"
 	"database/sql"
-	"github.com/goranbjelanovic/jet/qrm"
+	"github.com/goranbjelanovic/jet/v2/qrm"
 )
 
 //Statement is common interface for all statements(SELECT, INSERT, UPDATE, DELETE, LOCK)

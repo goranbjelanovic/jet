@@ -1,10 +1,10 @@
 package postgres
 
 import (
-	"github.com/goranbjelanovic/jet/internal/testutils"
-	. "github.com/goranbjelanovic/jet/postgres"
-	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/northwind/model"
-	. "github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/northwind/table"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	. "github.com/goranbjelanovic/jet/v2/postgres"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/northwind/model"
+	. "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/northwind/table"
 	"github.com/stretchr/testify/require"
 	"testing"
 )

@@ -1,7 +1,7 @@
 package postgres
 
 import (
-	"github.com/goranbjelanovic/jet/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
 )
 
 // UpdateStatement is interface of SQL UPDATE statement

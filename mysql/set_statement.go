@@ -1,6 +1,6 @@
 package mysql
 
-import "github.com/goranbjelanovic/jet/internal/jet"
+import "github.com/goranbjelanovic/jet/v2/internal/jet"
 
 // UNION effectively appends the result of sub-queries(select statements) into single query.
 // It eliminates duplicate rows from its result.

@@ -3,8 +3,8 @@ package postgres
 import (
 	"context"
 	"database/sql"
-	"github.com/goranbjelanovic/jet/postgres"
-	"github.com/goranbjelanovic/jet/tests/dbconfig"
+	"github.com/goranbjelanovic/jet/v2/postgres"
+	"github.com/goranbjelanovic/jet/v2/tests/dbconfig"
 	_ "github.com/lib/pq"
 	"github.com/pkg/profile"
 	"github.com/stretchr/testify/require"

@@ -3,8 +3,8 @@ package postgres
 import (
 	"testing"
 
-	"github.com/goranbjelanovic/jet/internal/jet"
-	"github.com/goranbjelanovic/jet/internal/testutils"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
 )
 
 var table1Col1 = IntegerColumn("col1")

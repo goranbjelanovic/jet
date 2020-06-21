@@ -2,10 +2,10 @@ package mysql
 
 import (
 	"context"
-	"github.com/goranbjelanovic/jet/internal/testutils"
-	. "github.com/goranbjelanovic/jet/mysql"
-	"github.com/goranbjelanovic/jet/tests/.gentestdata/mysql/test_sample/model"
-	. "github.com/goranbjelanovic/jet/tests/.gentestdata/mysql/test_sample/table"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	. "github.com/goranbjelanovic/jet/v2/mysql"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/mysql/test_sample/model"
+	. "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/mysql/test_sample/table"
 	"github.com/stretchr/testify/require"
 	"testing"
 	"time"

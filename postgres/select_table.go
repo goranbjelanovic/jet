@@ -1,6 +1,6 @@
 package postgres
 
-import "github.com/goranbjelanovic/jet/internal/jet"
+import "github.com/goranbjelanovic/jet/v2/internal/jet"
 
 // SelectTable is interface for MySQL sub-queries
 type SelectTable interface {

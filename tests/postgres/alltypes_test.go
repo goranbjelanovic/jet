@@ -6,12 +6,12 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/goranbjelanovic/jet/internal/testutils"
-	. "github.com/goranbjelanovic/jet/postgres"
-	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/test_sample/model"
-	. "github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/test_sample/table"
-	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/test_sample/view"
-	"github.com/goranbjelanovic/jet/tests/testdata/results/common"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	. "github.com/goranbjelanovic/jet/v2/postgres"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/test_sample/model"
+	. "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/test_sample/table"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/test_sample/view"
+	"github.com/goranbjelanovic/jet/v2/tests/testdata/results/common"
 )
 
 func TestAllTypesSelect(t *testing.T) {
