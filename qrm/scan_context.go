@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"database/sql/driver"
 	"fmt"
-	"github.com/go-jet/jet/internal/utils"
+	"github.com/goranbjelanovic/jet/internal/utils"
 	"reflect"
 	"strings"
 )

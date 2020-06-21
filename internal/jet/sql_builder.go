@@ -3,9 +3,9 @@ package jet
 import (
 	"bytes"
 	"fmt"
-	"github.com/go-jet/jet/internal/3rdparty/pq"
-	"github.com/go-jet/jet/internal/utils"
 	"github.com/google/uuid"
+	"github.com/goranbjelanovic/jet/internal/3rdparty/pq"
+	"github.com/goranbjelanovic/jet/internal/utils"
 	"reflect"
 	"strconv"
 	"strings"

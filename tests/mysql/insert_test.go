@@ -2,10 +2,10 @@ package mysql
 
 import (
 	"context"
-	"github.com/go-jet/jet/internal/testutils"
-	. "github.com/go-jet/jet/mysql"
-	"github.com/go-jet/jet/tests/.gentestdata/mysql/test_sample/model"
-	. "github.com/go-jet/jet/tests/.gentestdata/mysql/test_sample/table"
+	"github.com/goranbjelanovic/jet/internal/testutils"
+	. "github.com/goranbjelanovic/jet/mysql"
+	"github.com/goranbjelanovic/jet/tests/.gentestdata/mysql/test_sample/model"
+	. "github.com/goranbjelanovic/jet/tests/.gentestdata/mysql/test_sample/table"
 	"github.com/stretchr/testify/require"
 	"math/rand"
 	"testing"

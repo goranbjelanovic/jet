@@ -1,7 +1,7 @@
 package postgres
 
 import (
-	"github.com/go-jet/jet/internal/jet"
+	"github.com/goranbjelanovic/jet/internal/jet"
 	"strconv"
 )
 

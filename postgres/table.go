@@ -1,6 +1,6 @@
 package postgres
 
-import "github.com/go-jet/jet/internal/jet"
+import "github.com/goranbjelanovic/jet/internal/jet"
 
 // Table is interface for MySQL tables
 type Table interface {

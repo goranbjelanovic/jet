@@ -1,9 +1,9 @@
 package postgres
 
 import (
-	"github.com/go-jet/jet/generator/postgres"
-	"github.com/go-jet/jet/internal/testutils"
-	"github.com/go-jet/jet/tests/dbconfig"
+	"github.com/goranbjelanovic/jet/generator/postgres"
+	"github.com/goranbjelanovic/jet/internal/testutils"
+	"github.com/goranbjelanovic/jet/tests/dbconfig"
 	"github.com/stretchr/testify/require"
 	"io/ioutil"
 	"os"
@@ -11,7 +11,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/go-jet/jet/tests/.gentestdata/jetdb/dvds/model"
+	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/dvds/model"
 )
 
 func TestGeneratedModel(t *testing.T) {
@@ -46,7 +46,7 @@ func TestGeneratedModel(t *testing.T) {
 const genTestDir2 = "./.gentestdata2"
 
 func TestCmdGenerator(t *testing.T) {
-	goInstallJet := exec.Command("sh", "-c", "go install github.com/go-jet/jet/cmd/jet")
+	goInstallJet := exec.Command("sh", "-c", "go install github.com/goranbjelanovic/jet/cmd/jet")
 	goInstallJet.Stderr = os.Stderr
 	err := goInstallJet.Run()
 	require.NoError(t, err)
@@ -142,7 +142,7 @@ var mpaaRatingEnumFile = `
 
 package enum
 
-import "github.com/go-jet/jet/postgres"
+import "github.com/goranbjelanovic/jet/postgres"
 
 var MpaaRating = &struct {
 	G    postgres.StringExpression
@@ -170,7 +170,7 @@ var actorSQLBuilderFile = `
 package table
 
 import (
-	"github.com/go-jet/jet/postgres"
+	"github.com/goranbjelanovic/jet/postgres"
 )
 
 var Actor = newActorTable()
@@ -266,7 +266,7 @@ var actorInfoSQLBuilderFile = `
 package view
 
 import (
-	"github.com/go-jet/jet/postgres"
+	"github.com/goranbjelanovic/jet/postgres"
 )
 
 var ActorInfo = newActorInfoTable()
@@ -368,7 +368,7 @@ var moodEnumContent = `
 
 package enum
 
-import "github.com/go-jet/jet/postgres"
+import "github.com/goranbjelanovic/jet/postgres"
 
 var Mood = &struct {
 	Sad   postgres.StringExpression
@@ -391,7 +391,7 @@ var levelEnumContent = `
 
 package enum
 
-import "github.com/go-jet/jet/postgres"
+import "github.com/goranbjelanovic/jet/postgres"
 
 var Level = &struct {
 	Level1 postgres.StringExpression
@@ -499,7 +499,7 @@ var allTypesTableContent = `
 package table
 
 import (
-	"github.com/go-jet/jet/postgres"
+	"github.com/goranbjelanovic/jet/postgres"
 )
 
 var AllTypes = newAllTypesTable()

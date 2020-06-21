@@ -1,11 +1,11 @@
 package postgres
 
 import (
-	"github.com/go-jet/jet/internal/testutils"
-	. "github.com/go-jet/jet/postgres"
-	"github.com/go-jet/jet/tests/.gentestdata/jetdb/test_sample/model"
-	. "github.com/go-jet/jet/tests/.gentestdata/jetdb/test_sample/table"
 	"github.com/google/uuid"
+	"github.com/goranbjelanovic/jet/internal/testutils"
+	. "github.com/goranbjelanovic/jet/postgres"
+	"github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/test_sample/model"
+	. "github.com/goranbjelanovic/jet/tests/.gentestdata/jetdb/test_sample/table"
 	"github.com/stretchr/testify/require"
 	"testing"
 )

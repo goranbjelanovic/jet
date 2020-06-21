@@ -7,7 +7,7 @@
 
 package enum
 
-import "github.com/go-jet/jet/postgres"
+import "github.com/goranbjelanovic/jet/postgres"
 
 var MpaaRating = &struct {
 	G    postgres.StringExpression

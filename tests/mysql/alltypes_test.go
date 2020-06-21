@@ -9,13 +9,13 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/go-jet/jet/internal/testutils"
-	"github.com/go-jet/jet/tests/.gentestdata/mysql/test_sample/model"
-	. "github.com/go-jet/jet/tests/.gentestdata/mysql/test_sample/table"
-	"github.com/go-jet/jet/tests/.gentestdata/mysql/test_sample/view"
-	"github.com/go-jet/jet/tests/testdata/results/common"
+	"github.com/goranbjelanovic/jet/internal/testutils"
+	"github.com/goranbjelanovic/jet/tests/.gentestdata/mysql/test_sample/model"
+	. "github.com/goranbjelanovic/jet/tests/.gentestdata/mysql/test_sample/table"
+	"github.com/goranbjelanovic/jet/tests/.gentestdata/mysql/test_sample/view"
+	"github.com/goranbjelanovic/jet/tests/testdata/results/common"
 
-	. "github.com/go-jet/jet/mysql"
+	. "github.com/goranbjelanovic/jet/mysql"
 )
 
 func TestAllTypes(t *testing.T) {

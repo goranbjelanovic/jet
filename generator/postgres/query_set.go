@@ -2,8 +2,8 @@ package postgres
 
 import (
 	"database/sql"
-	"github.com/go-jet/jet/generator/internal/metadata"
-	"github.com/go-jet/jet/internal/utils"
+	"github.com/goranbjelanovic/jet/generator/internal/metadata"
+	"github.com/goranbjelanovic/jet/internal/utils"
 )
 
 // postgresQuerySet is dialect query set for PostgreSQL

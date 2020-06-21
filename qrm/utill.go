@@ -3,9 +3,9 @@ package qrm
 import (
 	"database/sql"
 	"fmt"
-	"github.com/go-jet/jet/internal/utils"
-	"github.com/go-jet/jet/qrm/internal"
 	"github.com/google/uuid"
+	"github.com/goranbjelanovic/jet/internal/utils"
+	"github.com/goranbjelanovic/jet/qrm/internal"
 	"reflect"
 	"strings"
 	"time"

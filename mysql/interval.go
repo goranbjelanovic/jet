@@ -5,8 +5,8 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/go-jet/jet/internal/jet"
-	"github.com/go-jet/jet/internal/utils"
+	"github.com/goranbjelanovic/jet/internal/jet"
+	"github.com/goranbjelanovic/jet/internal/utils"
 )
 
 type unitType string

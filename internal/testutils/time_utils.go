@@ -1,7 +1,7 @@
 package testutils
 
 import (
-	"github.com/go-jet/jet/internal/utils"
+	"github.com/goranbjelanovic/jet/internal/utils"
 	"strings"
 	"time"
 )
