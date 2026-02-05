@@ -37,7 +37,7 @@ jobs:
           git checkout "${DEFAULT_BRANCH}"
           
           pushd cmd/jet
-          go mod edit -require="github.com/go-jet/jet/v2@${root_tag}"
+          go mod edit -require="github.com/goranbjelanovic/jet/v2@${root_tag}"
           go mod tidy
           popd
           

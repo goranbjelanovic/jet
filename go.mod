@@ -1,4 +1,4 @@
-module github.com/go-jet/jet/v2
+module github.com/goranbjelanovic/jet/v2
 
 go 1.23.0
 
