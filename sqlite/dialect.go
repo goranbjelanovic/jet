@@ -3,7 +3,7 @@ package sqlite
 import (
 	"encoding/hex"
 	"fmt"
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
 )
 
 // Dialect is implementation of SQL Builder for SQLite databases.

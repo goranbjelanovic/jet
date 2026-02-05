@@ -3,7 +3,7 @@
 package jet
 
 import (
-	"github.com/go-jet/jet/v2/internal/3rdparty/snaker"
+	"github.com/goranbjelanovic/jet/v2/internal/3rdparty/snaker"
 )
 
 // Column is common column interface for all types of columns.

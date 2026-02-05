@@ -1,8 +1,8 @@
 package postgres
 
 import (
-	"github.com/go-jet/jet/v2/internal/jet"
-	"github.com/go-jet/jet/v2/internal/utils/is"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/utils/is"
 )
 
 type onConflict interface {

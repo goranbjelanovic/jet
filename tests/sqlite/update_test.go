@@ -5,14 +5,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-jet/jet/v2/qrm"
-	model2 "github.com/go-jet/jet/v2/tests/.gentestdata/sqlite/sakila/model"
-	"github.com/go-jet/jet/v2/tests/.gentestdata/sqlite/sakila/table"
+	"github.com/goranbjelanovic/jet/v2/qrm"
+	model2 "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/sqlite/sakila/model"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/sqlite/sakila/table"
 
-	"github.com/go-jet/jet/v2/internal/testutils"
-	. "github.com/go-jet/jet/v2/sqlite"
-	"github.com/go-jet/jet/v2/tests/.gentestdata/sqlite/test_sample/model"
-	. "github.com/go-jet/jet/v2/tests/.gentestdata/sqlite/test_sample/table"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	. "github.com/goranbjelanovic/jet/v2/sqlite"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/sqlite/test_sample/model"
+	. "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/sqlite/test_sample/table"
 	"github.com/stretchr/testify/require"
 )
 

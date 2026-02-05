@@ -3,7 +3,7 @@ package mysql
 import (
 	"strconv"
 
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
 )
 
 // CAST function converts an expr (of any type) into later specified datatype.

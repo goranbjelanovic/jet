@@ -4,15 +4,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-jet/jet/v2/internal/testutils"
-	"github.com/go-jet/jet/v2/internal/utils/ptr"
-	"github.com/go-jet/jet/v2/qrm"
-	"github.com/go-jet/jet/v2/tests/.gentestdata/jetdb/dvds/view"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	"github.com/goranbjelanovic/jet/v2/internal/utils/ptr"
+	"github.com/goranbjelanovic/jet/v2/qrm"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/view"
 	"github.com/stretchr/testify/require"
 
-	. "github.com/go-jet/jet/v2/postgres"
-	"github.com/go-jet/jet/v2/tests/.gentestdata/jetdb/dvds/model"
-	. "github.com/go-jet/jet/v2/tests/.gentestdata/jetdb/dvds/table"
+	. "github.com/goranbjelanovic/jet/v2/postgres"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/model"
+	. "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/dvds/table"
 )
 
 func TestSelectJsonObject(t *testing.T) {

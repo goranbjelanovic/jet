@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
 )
 
 // RowLock is interface for SELECT statement row lock types

@@ -6,12 +6,12 @@ import (
 	"time"
 
 	"github.com/bytedance/sonic"
-	"github.com/go-jet/jet/v2/internal/testutils"
-	"github.com/go-jet/jet/v2/internal/utils/ptr"
-	. "github.com/go-jet/jet/v2/postgres"
-	"github.com/go-jet/jet/v2/tests/.gentestdata/jetdb/chinook/model"
-	. "github.com/go-jet/jet/v2/tests/.gentestdata/jetdb/chinook/table"
-	"github.com/go-jet/jet/v2/tests/.gentestdata/jetdb/chinook2/table"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	"github.com/goranbjelanovic/jet/v2/internal/utils/ptr"
+	. "github.com/goranbjelanovic/jet/v2/postgres"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/chinook/model"
+	. "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/chinook/table"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/jetdb/chinook2/table"
 	"github.com/stretchr/testify/require"
 )
 

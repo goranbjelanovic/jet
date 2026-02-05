@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-jet/jet/v2/internal/jet"
-	"github.com/go-jet/jet/v2/internal/utils/datetime"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/utils/datetime"
 )
 
 type quantityAndUnit = float64

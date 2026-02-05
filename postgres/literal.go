@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/go-jet/jet/v2/internal/3rdparty/pq"
+	"github.com/goranbjelanovic/jet/v2/internal/3rdparty/pq"
 
-	"github.com/go-jet/jet/v2/internal/jet"
+	"github.com/goranbjelanovic/jet/v2/internal/jet"
 )
 
 // Bool is boolean literal constructor

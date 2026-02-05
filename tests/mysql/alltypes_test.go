@@ -5,19 +5,19 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-jet/jet/v2/internal/utils/ptr"
+	"github.com/goranbjelanovic/jet/v2/internal/utils/ptr"
 	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/require"
 
 	"github.com/google/uuid"
 
-	"github.com/go-jet/jet/v2/internal/testutils"
-	"github.com/go-jet/jet/v2/tests/.gentestdata/mysql/test_sample/model"
-	. "github.com/go-jet/jet/v2/tests/.gentestdata/mysql/test_sample/table"
-	"github.com/go-jet/jet/v2/tests/.gentestdata/mysql/test_sample/view"
-	"github.com/go-jet/jet/v2/tests/testdata/results/common"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/mysql/test_sample/model"
+	. "github.com/goranbjelanovic/jet/v2/tests/.gentestdata/mysql/test_sample/table"
+	"github.com/goranbjelanovic/jet/v2/tests/.gentestdata/mysql/test_sample/view"
+	"github.com/goranbjelanovic/jet/v2/tests/testdata/results/common"
 
-	. "github.com/go-jet/jet/v2/mysql"
+	. "github.com/goranbjelanovic/jet/v2/mysql"
 )
 
 func TestAllTypes(t *testing.T) {

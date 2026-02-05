@@ -8,15 +8,15 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/go-jet/jet/v2/generator/postgres"
-	"github.com/go-jet/jet/v2/generator/template"
-	"github.com/go-jet/jet/v2/internal/3rdparty/snaker"
-	"github.com/go-jet/jet/v2/internal/testutils"
-	"github.com/go-jet/jet/v2/internal/utils/dbidentifier"
-	postgres2 "github.com/go-jet/jet/v2/postgres"
-	"github.com/go-jet/jet/v2/tests/dbconfig"
-	file2 "github.com/go-jet/jet/v2/tests/internal/utils/file"
+	"github.com/goranbjelanovic/jet/v2/generator/metadata"
+	"github.com/goranbjelanovic/jet/v2/generator/postgres"
+	"github.com/goranbjelanovic/jet/v2/generator/template"
+	"github.com/goranbjelanovic/jet/v2/internal/3rdparty/snaker"
+	"github.com/goranbjelanovic/jet/v2/internal/testutils"
+	"github.com/goranbjelanovic/jet/v2/internal/utils/dbidentifier"
+	postgres2 "github.com/goranbjelanovic/jet/v2/postgres"
+	"github.com/goranbjelanovic/jet/v2/tests/dbconfig"
+	file2 "github.com/goranbjelanovic/jet/v2/tests/internal/utils/file"
 )
 
 const tempTestDir = "./.tempTestDir"
@@ -569,7 +569,7 @@ func TestRenameEnumValueName(t *testing.T) {
 
 package enum
 
-import "github.com/go-jet/jet/v2/postgres"
+import "github.com/goranbjelanovic/jet/v2/postgres"
 
 var MpaaRating = &struct {
 	GRating postgres.StringExpression
