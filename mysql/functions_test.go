@@ -2,10 +2,9 @@ package mysql
 
 import (
 	"testing"
-
-	"github.com/google/uuid"
 )
 
 func TestUUIDToBin(t *testing.T) {
-	assertSerialize(t, UUID_TO_BIN(String(uuid.Nil.String())), `uuid_to_bin(?)`, uuid.Nil.String())
+	assertSerialize(t, UUID_TO_BIN(String("294b7e43-a21f-4088-8f04-fb8de7770587")),
+		`uuid_to_bin(?)`, "294b7e43-a21f-4088-8f04-fb8de7770587")
 }

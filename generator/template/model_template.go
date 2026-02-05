@@ -2,17 +2,11 @@ package template
 
 import (
 	"fmt"
-	"github.com/lib/pq"
+	"github.com/go-jet/jet/v2/generator/metadata"
+	"github.com/go-jet/jet/v2/internal/utils/dbidentifier"
 	"path/filepath"
 	"reflect"
 	"strings"
-	"time"
-
-	"github.com/google/uuid"
-	"github.com/jackc/pgtype"
-
-	"github.com/go-jet/jet/v2/generator/metadata"
-	"github.com/go-jet/jet/v2/internal/utils/dbidentifier"
 )
 
 // Model is template for model files generation
@@ -250,6 +244,7 @@ func getType(columnMetadata metadata.Column) Type {
 	if userDefinedType != "" {
 		var importPath string
 
+		// array of enums
 		if columnMetadata.DataType.IsArray() {
 			userDefinedType = "pq.StringArray"
 			importPath = "github.com/lib/pq"
@@ -265,7 +260,7 @@ func getType(columnMetadata metadata.Column) Type {
 		}
 	}
 
-	return NewType(getGoType(columnMetadata))
+	return getGoType(columnMetadata)
 }
 
 func getUserDefinedType(column metadata.Column) string {
@@ -279,7 +274,7 @@ func getUserDefinedType(column metadata.Column) string {
 	return ""
 }
 
-func getGoType(column metadata.Column) interface{} {
+func getGoType(column metadata.Column) Type {
 	goType := toGoType(column)
 
 	if column.DataType.IsArray() {
@@ -287,75 +282,99 @@ func getGoType(column metadata.Column) interface{} {
 	}
 
 	if column.IsNullable {
-		return reflect.New(reflect.TypeOf(goType)).Interface()
+		goType.Name = "*" + goType.Name
 	}
 
 	return goType
 }
 
-func toGoArrayType(elemType any, column metadata.Column) any {
+func toGoArrayType(elemType Type, column metadata.Column) Type {
 	if column.DataType.Dimensions > 1 {
-		return "" // unsupported multidimensional arrays
+		return Type{Name: "string"} // unsupported multidimensional arrays
 	}
 
-	switch elemType.(type) {
-	case bool:
-		return pq.BoolArray{}
-	case int32:
-		return pq.Int32Array{}
-	case int64:
-		return pq.Int64Array{}
-	case float32:
-		return pq.Float32Array{}
-	case float64:
-		return pq.Float64Array{}
-	case []byte:
-		return pq.ByteaArray{}
+	switch elemType.Name {
+	case "bool":
+		return Type{
+			Name:       "pq.BoolArray",
+			ImportPath: "github.com/lib/pq",
+		}
+	case "int32":
+		return Type{
+			Name:       "pq.Int32Array",
+			ImportPath: "github.com/lib/pq",
+		}
+	case "int64":
+		return Type{
+			Name:       "pq.Int64Array",
+			ImportPath: "github.com/lib/pq",
+		}
+	case "float32":
+		return Type{
+			Name:       "pq.Float32Array",
+			ImportPath: "github.com/lib/pq",
+		}
+	case "float64":
+		return Type{
+			Name:       "pq.Float64Array",
+			ImportPath: "github.com/lib/pq",
+		}
+	case "[]byte":
+		return Type{
+			Name:       "pq.ByteaArray",
+			ImportPath: "github.com/lib/pq",
+		}
 	default:
-		return pq.StringArray{}
+		return Type{
+			Name:       "pq.StringArray",
+			ImportPath: "github.com/lib/pq",
+		}
 	}
 }
 
 // toGoType returns model type for column info.
-func toGoType(column metadata.Column) interface{} {
+func toGoType(column metadata.Column) Type {
 
 	switch strings.ToLower(column.DataType.Name) {
 	case "user-defined", "enum":
-		return ""
+		return Type{Name: "string"}
 	case "boolean", "bool":
-		return false
+		return Type{Name: "bool"}
 	case "tinyint":
 		if column.DataType.IsUnsigned {
-			return uint8(0)
+			return Type{Name: "uint8"}
 		}
-		return int8(0)
+		return Type{Name: "int8"}
 	case "smallint", "int2",
 		"year":
 		if column.DataType.IsUnsigned {
-			return uint16(0)
+			return Type{Name: "uint16"}
 		}
-		return int16(0)
+		return Type{Name: "int16"}
 	case "integer", "int4",
 		"mediumint", "int": //MySQL
 		if column.DataType.IsUnsigned {
-			return uint32(0)
+			return Type{Name: "uint32"}
 		}
-		return int32(0)
+		return Type{Name: "int32"}
 	case "bigint", "int8":
 		if column.DataType.IsUnsigned {
-			return uint64(0)
+			return Type{Name: "uint64"}
 		}
-		return int64(0)
+		return Type{Name: "int64"}
 	case "date",
 		"timestamp without time zone", "timestamp",
 		"timestamp with time zone", "timestamptz",
 		"time without time zone", "time",
 		"time with time zone", "timetz",
 		"datetime": // MySQL
-		return time.Time{}
+		return Type{
+			Name:       "time.Time",
+			ImportPath: "time",
+		}
 	case "bytea",
 		"binary", "varbinary", "tinyblob", "blob", "mediumblob", "longblob": //MySQL
-		return []byte("")
+		return Type{Name: "[]byte"}
 	case "text",
 		"character", "bpchar",
 		"character varying", "varchar", "nvarchar",
@@ -363,29 +382,50 @@ func toGoType(column metadata.Column) interface{} {
 		"money", "json", "jsonb",
 		"xml", "point", "interval", "line", "array",
 		"char", "tinytext", "mediumtext", "longtext": // MySQL
-		return ""
+		return Type{Name: "string"}
 	case "real", "float4":
-		return float32(0.0)
+		return Type{Name: "float32"}
 	case "numeric", "decimal",
 		"double precision", "float8", "float",
 		"double": // MySQL
-		return float64(0.0)
+		return Type{Name: "float64"}
 	case "uuid":
-		return uuid.UUID{}
+		return Type{
+			Name:       "uuid.UUID",
+			ImportPath: "github.com/google/uuid",
+		}
 	case "daterange":
-		return pgtype.Daterange{}
+		return Type{
+			Name:       "pgtype.Daterange",
+			ImportPath: "github.com/jackc/pgtype",
+		}
 	case "tsrange":
-		return pgtype.Tsrange{}
+		return Type{
+			Name:       "pgtype.Tsrange",
+			ImportPath: "github.com/jackc/pgtype",
+		}
 	case "tstzrange":
-		return pgtype.Tstzrange{}
+		return Type{
+			Name:       "pgtype.Tstzrange",
+			ImportPath: "github.com/jackc/pgtype",
+		}
 	case "int4range":
-		return pgtype.Int4range{}
+		return Type{
+			Name:       "pgtype.Int4range",
+			ImportPath: "github.com/jackc/pgtype",
+		}
 	case "int8range":
-		return pgtype.Int8range{}
+		return Type{
+			Name:       "pgtype.Int8range",
+			ImportPath: "github.com/jackc/pgtype",
+		}
 	case "numrange":
-		return pgtype.Numrange{}
+		return Type{
+			Name:       "pgtype.Numrange",
+			ImportPath: "github.com/jackc/pgtype",
+		}
 	default:
 		fmt.Println("- [Model      ] Unsupported sql column '" + column.Name + " " + column.DataType.Name + "', using string instead.")
-		return ""
+		return Type{Name: "string"}
 	}
 }

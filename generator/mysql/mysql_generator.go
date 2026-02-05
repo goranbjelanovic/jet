@@ -9,7 +9,6 @@ import (
 	"github.com/go-jet/jet/v2/generator/metadata"
 	"github.com/go-jet/jet/v2/generator/template"
 	"github.com/go-jet/jet/v2/mysql"
-	mysqldr "github.com/go-sql-driver/mysql"
 )
 
 const mysqlMaxConns = 10
@@ -56,21 +55,24 @@ func GenerateDSN(dsn, destDir string, templates ...template.Template) error {
 		dsn = dsn[idx+len("://"):]
 	}
 
-	cfg, err := mysqldr.ParseDSN(dsn)
-	if err != nil {
-		return fmt.Errorf("failed to parse DSN: %w", err)
-	}
-	if cfg.DBName == "" {
-		return errors.New("database name is required")
-	}
-
 	db, err := openConnection(dsn)
 	if err != nil {
 		return fmt.Errorf("failed to open db connection: %w", err)
 	}
 	defer db.Close()
 
-	err = GenerateDB(db, cfg.DBName, destDir, templates...)
+	var dbName string
+
+	err = db.QueryRow("SELECT DATABASE();").Scan(&dbName)
+	if err != nil {
+		return fmt.Errorf("can't retrieve database name: %w", err)
+	}
+
+	if dbName == "" {
+		return errors.New("database name is required")
+	}
+
+	err = GenerateDB(db, dbName, destDir, templates...)
 	if err != nil {
 		return fmt.Errorf("failed to generate: %w", err)
 	}

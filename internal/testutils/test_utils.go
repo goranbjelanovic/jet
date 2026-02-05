@@ -10,7 +10,6 @@ import (
 	"github.com/go-jet/jet/v2/qrm"
 	"github.com/go-jet/jet/v2/stmtcache"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"os"
@@ -344,11 +343,4 @@ func printDiff(actual, expected interface{}, options ...cmp.Option) {
 	fmt.Println(actual)
 	fmt.Println("Expected: ")
 	fmt.Println(expected)
-}
-
-// UUIDPtr returns address of uuid.UUID
-func UUIDPtr(u string) *uuid.UUID {
-	newUUID := uuid.MustParse(u)
-
-	return &newUUID
 }

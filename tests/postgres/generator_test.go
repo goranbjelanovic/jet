@@ -342,7 +342,7 @@ func TestGeneratorSpecialCharacters(t *testing.T) {
 
 func TestGenerateErrorCases(t *testing.T) {
 	err := postgres.GenerateDSN("!@#$%&*", "", "")
-	require.ErrorContains(t, err, "failed to parse as DSN")
+	require.ErrorContains(t, err, "failed to open db connection")
 	err = postgres.GenerateDSN(dsn(dbconfig.PgHost, -1, "!@!#", "", ""), "", "")
 	require.ErrorContains(t, err, "invalid port")
 	err = postgres.GenerateDSN(dsn(dbconfig.PgHost, dbconfig.PgPort, "!@!#", "", ""), "", "")

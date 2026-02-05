@@ -1,7 +1,7 @@
 package postgres
 
 import (
-	"github.com/lib/pq"
+	"github.com/go-jet/jet/v2/internal/3rdparty/pq"
 	"testing"
 )
 

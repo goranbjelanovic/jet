@@ -4,15 +4,15 @@ import (
 	"bytes"
 	"database/sql/driver"
 	"fmt"
-	"github.com/go-jet/jet/v2/internal/3rdparty/pq"
-	"github.com/go-jet/jet/v2/internal/utils/is"
-	"github.com/google/uuid"
 	"reflect"
 	"sort"
 	"strconv"
 	"strings"
 	"time"
 	"unicode"
+
+	"github.com/go-jet/jet/v2/internal/3rdparty/pq"
+	"github.com/go-jet/jet/v2/internal/utils/is"
 )
 
 // SQLBuilder generates output SQL
@@ -250,8 +250,6 @@ func (s *SQLBuilder) argToString(value interface{}) string {
 		return stringQuote(bindVal)
 	case []byte:
 		return stringQuote(string(bindVal))
-	case uuid.UUID:
-		return stringQuote(bindVal.String())
 	case time.Time:
 		return stringQuote(string(pq.FormatTimestamp(bindVal)))
 	default:

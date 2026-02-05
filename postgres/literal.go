@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/lib/pq"
+	"github.com/go-jet/jet/v2/internal/3rdparty/pq"
 
 	"github.com/go-jet/jet/v2/internal/jet"
 )
@@ -231,25 +231,25 @@ func ByteaArray(values ...[]byte) Array[ByteaExpression] {
 
 // DateArray creates new date array literal expression from list of values
 func DateArray(values ...time.Time) Array[DateExpression] {
-	return CAST(jet.Literal(pq.Array(values))).AS_DATE_ARRAY()
+	return CAST(jet.Literal(pq.TimeArray(values))).AS_DATE_ARRAY()
 }
 
 // TimestampArray creates new timestamp array literal expression from list of values
 func TimestampArray(values ...time.Time) Array[TimestampExpression] {
-	return CAST(jet.Literal(pq.Array(values))).AS_TIMESTAMP_ARRAY()
+	return CAST(jet.Literal(pq.TimeArray(values))).AS_TIMESTAMP_ARRAY()
 }
 
 // TimestampzArray creates new timestampt with timezone array literal expression from list of values
 func TimestampzArray(values ...time.Time) Array[TimestampzExpression] {
-	return CAST(jet.Literal(pq.Array(values))).AS_TIMESTAMPZ_ARRAY()
+	return CAST(jet.Literal(pq.TimeArray(values))).AS_TIMESTAMPZ_ARRAY()
 }
 
 // TimeArray creates new time array literal expression from list of values
 func TimeArray(values ...time.Time) Array[TimeExpression] {
-	return CAST(jet.Literal(pq.Array(values))).AS_TIME_ARRAY()
+	return CAST(jet.Literal(pq.TimeArray(values))).AS_TIME_ARRAY()
 }
 
 // TimezArray creates new time with timezone array literal expression from list of values
 func TimezArray(values ...time.Time) Array[TimezExpression] {
-	return CAST(jet.Literal(pq.Array(values))).AS_TIMEZ_ARRAY()
+	return CAST(jet.Literal(pq.TimeArray(values))).AS_TIMEZ_ARRAY()
 }
