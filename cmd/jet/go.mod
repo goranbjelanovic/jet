@@ -1,4 +1,4 @@
-module github.com/goranbjelanovic/jet/v2/cmd/jet/v2
+module github.com/goranbjelanovic/jet/cmd/jet/v2
 
 go 1.24.0
 
